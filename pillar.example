@@ -1,0 +1,9 @@
+packages:
+  names:
+    - tmux
+    - vim
+    - mutt
+    - htop
+    - tree
+    - bsd-mailx
+    - irssi
