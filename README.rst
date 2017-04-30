@@ -17,4 +17,4 @@ Available states
 ``init``
 --------
 
-Iterate through the package list pillar and installs the packages listed.
+Iterate through the package list pillar and install the packages listed.
