@@ -1,4 +1,4 @@
-{% for package in salt['pillar.get']('packages:names', [])} %}
+{% for package in salt['pillar.get']('packages:names', []) %}
 
 package-install-{{package}}:
   pkg.installed:
