@@ -2,11 +2,11 @@
 packages-formula
 ================
 
-A simple saltstack formula designed to install a list of packages that
-should be present in a system without any specific global configuration. 
+A simple saltstack formula designed to manage lists of packages that
+must be present and/or absent in a given host.
 
 This can be used to ensure must-have utilities are installed on a set
-of machines.
+of machines and also that packages that must not be present are actually absent.
 
 Available states
 ================
@@ -17,4 +17,5 @@ Available states
 ``init``
 --------
 
-Iterate through the package list pillar and install the packages listed.
+Iterate through the package pillar installing packages listed under the `present`
+entry and removes packages listed under the `absent` entry.

@@ -1,5 +1,5 @@
 packages:
-  names:
+  present:
     - tmux
     - vim
     - mutt
@@ -7,3 +7,6 @@ packages:
     - tree
     - bsd-mailx
     - irssi
+  absent:
+    - telnet
+    - libx11-data
