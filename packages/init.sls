@@ -1,13 +1,9 @@
 {# Installing the packages we want to have #}
-{% for package in salt['pillar.get']('packages:present', {}) %}
-install-package-{{package}}:
+install-packages:
   pkg.installed:
-    - name: {{package}}
-{% endfor %}
+    - pkgs: {{ salt['pillar.get']('packages:present', []) }}
 
 {# Removing the packages we don't want to have. #}
-{% for package in salt['pillar.get']('packages:absent', {}) %}
-remove-package-{{package}}:
-  pkg.removed:
-    - name: {{package}}
-{% endfor %}
+remove-packages:
+  pkg.absent:
+    - pkgs: {{ salt['pillar.get']('packages:absent', []) }}
