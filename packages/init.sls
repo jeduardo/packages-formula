@@ -5,5 +5,5 @@ install-packages:
 
 {# Removing the packages we don't want to have. #}
 remove-packages:
-  pkg.absent:
+  pkg.removed:
     - pkgs: {{ salt['pillar.get']('packages:absent', []) }}
