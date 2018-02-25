@@ -1,12 +1,7 @@
 packages:
   present:
-    - tmux
-    - vim
-    - mutt
-    - htop
-    - tree
-    - bsd-mailx
-    - irssi
+    tmux:
+    mutt:
+    htop:
   absent:
-    - telnet
-    - libx11-data
+    telnet:
